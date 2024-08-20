@@ -1,3 +1,16 @@
+# システム工学総合Ⅱ 2024年度
+担当教員：[劉　子昂](https://zi-ang-liu.github.io/)
+
+## 実習内容
+
+| 週  | 内容               | 資料 |
+| --- | ------------------ | ---- |
+| 1   | データ分析         |      |
+| 2   | 数理最適化         |      |
+| 3   | ネットワーク最適化 |      |
+| 4   | 機械学習           |      |
+
+
 # Welcome to your Jupyter Book
 
 This is a small sample book to give you a feel for how book content is
