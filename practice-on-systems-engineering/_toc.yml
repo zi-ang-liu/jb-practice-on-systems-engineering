@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: math-python
+- file: contents/math-python
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
