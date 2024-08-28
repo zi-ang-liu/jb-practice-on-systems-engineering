@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # 数学とPythonプログラミング
 
 ## Equality
@@ -9,23 +24,23 @@
 
 In Python:
 
-```python
+```{code-cell}
 ## Equality
 1 + 1 == 2
 ```
 
-```python
+```{code-cell}
 ## Assignment
 x = 1 + 1
 print(x)
 ```
 
-```python
+```{code-cell}
 ## Inequality
 1 + 1 != 3
 ```
 
-```python
+```{code-cell}
 ## Approximation
 import math
 
@@ -44,7 +59,7 @@ The difference between $=$ and $\coloneqq$ is that the former is an equality rel
 
 A *set* is a collection of distinct objects. For example, $\{1, 2, 3\}$ is a set.
 
-```python
+```{code-cell}
 set_1 = {1, 2, 3}
 print(set_1)
 ```
