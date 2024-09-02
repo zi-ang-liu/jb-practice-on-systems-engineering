@@ -105,3 +105,10 @@ list_1[0] = 4
 print(list_1)  # Output: [4, 2, 3]
 ```
 
+# Big Sum and Big Product
+
+In mathematics, the big sum and big product notations are used to represent the sum and product of a collection of elements, respectively.
+
+## Big Sum
+
+The big sum notation is denoted by the symbol $\sum$. For example, $\sum_{i=1}^{n} i$ represents the sum of the first $n$ natural numbers.
