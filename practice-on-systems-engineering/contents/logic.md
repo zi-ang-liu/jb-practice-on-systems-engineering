@@ -135,3 +135,21 @@ result = sum([x**2 + 1 for x in set_1])
 print(result)
 ```
 
+# Function
+
+In mathematics, a function is a mapping from a set of inputs to a set of outputs. In general, given a set $A$ and a set $B$, the notation $f: A \rightarrow B$ denotes that the function $f$ takes an input from set $A$ and returns an output in set $B$. 
+
+Note that it is not necessary that every element in set $B$ be an output of the function $f$. For example, $\sin: \mathbb{R} \rightarrow \mathbb{R}$ denotes that the sine function takes a real number as input and returns a real number as output. Although the output of the sine function is within the range $[-1, 1]$.
+
+## Function and Function Evaluation
+
+Given a function $f: A \rightarrow B$ and an element $x \in A$, the value of the function $f$ at $x$ is denoted by $f(x)$. 
+
+For example, if $f(x) = x^2$, then $f(2) = 2^2 = 4$.
+
+Another way to represent the value of a function is by using the notation 
+
+$$
+f(x) \rvert_{x=a}.
+$$
+
