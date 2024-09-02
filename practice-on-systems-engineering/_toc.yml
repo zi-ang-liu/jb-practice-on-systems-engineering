@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 chapters:
 - file: contents/math-python
+- file: contents/logic
 - file: contents/set
 - file: markdown
 - file: notebooks
