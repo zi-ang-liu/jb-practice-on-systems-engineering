@@ -105,10 +105,33 @@ list_1[0] = 4
 print(list_1)  # Output: [4, 2, 3]
 ```
 
-# Big Sum and Big Product
+# Big Sum
 
-In mathematics, the big sum and big product notations are used to represent the sum and product of a collection of elements, respectively.
+In mathematics, the big sum is used to represent the sum a collection of elements. The big sum notation is denoted by the symbol $\sum$. A basic usage of the big sum notation is as follows:
 
-## Big Sum
+$$
+\sum_{i=\text{start}}^{\text{end}} \text{expression}
+$$
 
-The big sum notation is denoted by the symbol $\sum$. For example, $\sum_{i=1}^{n} i$ represents the sum of the first $n$ natural numbers.
+For example, the sum of the first $n$ natural numbers can be represented as:
+
+$$
+\sum_{i=1}^{n} x_i^2 = x_1^2 + x_2^2 + \ldots + x_n^2
+$$
+
+In addition, we can use the big sum notation to traverse a list of elements. Let's consider a set $A = \{5, 10, 15, 20\}$. The sum of the elements in set $A$ can be represented as:
+
+$$
+\sum_{x \in A} x = 5 + 10 + 15 + 20
+$$
+
+In Python, the `sum()` function can be used to calculate the sum of a collection of elements. 
+
+Let's consider a set $A = \{5, 10, 15, 20\}$. Then, $\sum_{x \in A} (x^2 + 1)$ can be calculated as follows:
+
+```python
+set_1 = {5, 10, 15, 20}
+result = sum([x**2 + 1 for x in set_1])
+print(result)
+```
+
