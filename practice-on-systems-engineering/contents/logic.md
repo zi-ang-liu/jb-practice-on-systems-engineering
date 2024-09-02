@@ -57,3 +57,51 @@ set_1 = {1, 2, 3, 4, 5}
 print(any([x**2 == 4 for x in set_1]))  # Output: True
 ```
 where `any()` returns `True` if any element in the iterable is true.
+
+
+
+# Tuple
+
+In mathematics, a tuple is a collection of elements in which repetition is allowed and order matters (remember that in sets, repetition is not allowed and order does not matter).
+
+A tuple is usually denoted by round brackets. For example, $(1, 2, 2, 3)$ and $(1, 3, 2, 2)$ are lists, and since order matters, they are different lists.  
+
+A tuple can be represented by a letter, e.g., $a = (1, 2, 3)$, where $a_1 = 1$, $a_2 = 2$, and $a_3 = 3$.
+
+An $n$-tuple is a tuple with $n$ elements. For example, $(1, 2, 3)$ is a 3-tuple. A 1-tuple is called a *singleton*, and a 2-tuple is called an *ordered pair*.
+
+In Python, a tuple is a collection of elements that is ordered and immutable. Tuples are defined by enclosing the elements in parentheses `()`. For example:
+
+```python
+tuple_1 = (1, 2, 3)
+tuple_2 = ('a', 'b', 'c')
+print(tuple_1)  # Output: (1, 2, 3)
+print(tuple_2)  # Output: ('a', 'b', 'c')
+```
+
+A list is a collection of elements that is ordered and mutable. Lists are defined by enclosing the elements in square brackets `[]`. For example:
+
+```python
+list_1 = [1, 2, 3]
+list_2 = ['a', 'b', 'c']
+print(list_1)  # Output: [1, 2, 3]
+print(list_2)  # Output: ['a', 'b', 'c']
+```
+
+The main difference between a tuple and a list is that a tuple is immutable, while a list is mutable. This means that the elements of a tuple cannot be changed, while the elements of a list can be changed.
+
+```python
+tuple_1 = (1, 2, 3)
+
+# Attempting to change the first element of tuple_1 will raise an error
+tuple_1[0] = 4  
+```
+
+```python
+list_1 = [1, 2, 3]
+
+# Changing the first element of list_1
+list_1[0] = 4
+print(list_1)  # Output: [4, 2, 3]
+```
+
