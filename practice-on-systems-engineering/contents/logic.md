@@ -35,3 +35,25 @@ for x in set_1:
     print(x)
 ```
 
+If we want to check if $\forall x \in \{1, 2, 3, 4, 5\}, x > 0$, we can use the following code:
+```python
+set_1 = {1, 2, 3, 4, 5}
+result = []
+for x in set_1:
+    result.append(x > 0)
+print(all(result))  # Output: True
+```
+where `all()` returns `True` if all elements in the iterable are true.
+
+The code above can be simplified using a list comprehension:
+```python
+set_1 = {1, 2, 3, 4, 5}
+print(all([x > 0 for x in set_1]))  # Output: True
+```
+
+Similarly, if we want to check if $\exists x \in \{1, 2, 3, 4, 5\} \text{ s.t. } x^2 = 4$, we can use the following code:
+```python
+set_1 = {1, 2, 3, 4, 5}
+print(any([x**2 == 4 for x in set_1]))  # Output: True
+```
+where `any()` returns `True` if any element in the iterable is true.
