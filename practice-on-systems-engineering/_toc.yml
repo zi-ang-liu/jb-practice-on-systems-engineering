@@ -4,12 +4,13 @@
 format: jb-book
 root: intro
 chapters:
-- file: contents/math-python
+- file: contents/equality
 - file: contents/set
 - file: contents/list
 - file: contents/logic
 - file: contents/bigsums
 - file: contents/function
+- file: contents/lp
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
