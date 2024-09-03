@@ -141,7 +141,6 @@ In mathematics, a function is a mapping from a set of inputs to a set of outputs
 
 Note that it is not necessary that every element in set $B$ be an output of the function $f$. For example, $\sin: \mathbb{R} \rightarrow \mathbb{R}$ denotes that the sine function takes a real number as input and returns a real number as output. Although the output of the sine function is within the range $[-1, 1]$.
 
-## Function and Function Evaluation
 
 Given a function $f: A \rightarrow B$ and an element $x \in A$, the value of the function $f$ at $x$ is denoted by $f(x)$. 
 
@@ -153,3 +152,18 @@ $$
 f(x) \rvert_{x=a}.
 $$
 
+In addition, $y = f(x)$ can be written as $x \xmapsto{f} y$ or $x \mapsto y$. 
+
+In Python, functions can be defined using the `def` keyword. For example, the function $f(x) = x^2$ can be defined as follows:
+
+```python
+def f(x):
+    return x**2
+```
+
+When we want to know the value of the function $f$ at $x = 2$, we can call the function `f` with the argument `2`:
+
+```python
+result = f(2)
+print(result)  # Output: 4
+```

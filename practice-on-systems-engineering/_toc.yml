@@ -9,6 +9,7 @@ chapters:
 - file: contents/list
 - file: contents/logic
 - file: contents/bigsums
+- file: contents/function
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
