@@ -43,6 +43,21 @@
   - pandasライブラリ
   - scikit-learnライブラリ
 
+## 実験環境
+
+本実験では、Google Colabを使用します。Colab（正式名称「Colaboratory」）では、ブラウザ上で Python を記述、実行できます。
+
+以下の手順で Colab で初めてのプログラムを実行してみましょう。
+
+1. Google アカウントでログイン
+2. [Colab のページ](https://colab.research.google.com/)にアクセス
+3. **+ New notebook** をクリックして新しいノートブックを作成
+4. セルに`print("Hello, world!")`と入力して、セルを実行
+5. セルの下に`Hello, world!`と表示されたら成功
+6. Fileメニューから「Download」、「Download .ipynb」を選択して、ノートブックをダウンロード
+
+本実験で作成するすべての成果物を Colab で作成し、「.ipynb」形式で Moodle 経由で提出してください。
+
 ## 成績評価
 
 実験の成果物を Moodle 経由で提出してもらいます．これをもって実験への参加を確認しますので，すべて提出することが成績評価の前提となります．提出期限は，授業終了時とします．
