@@ -41,6 +41,8 @@
   - pandasライブラリ
   - scikit-learnライブラリ -->
 
+
+
 ## 実験環境
 
 本実験では、Google Colabを使用します。Colab（正式名称「Colaboratory」）では、ブラウザ上で Python を記述、実行できます。
