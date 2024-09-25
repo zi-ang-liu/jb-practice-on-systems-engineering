@@ -10,8 +10,6 @@
 
 担当教員：[劉 子昂](https://zi-ang-liu.github.io/)
 
-メール：liu.ziang＠okayama-u.ac.jp
-
 ## 実験目的
 
 本実験を通して、下記を学習することを目指します。
