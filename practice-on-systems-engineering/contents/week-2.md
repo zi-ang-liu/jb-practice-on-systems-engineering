@@ -33,7 +33,7 @@ $I^{(1)} = [a^{(1)}, b^{(1)}]$を新しい区間として、$f(a^{(1)})f(b^{(1)}
 ```{prf:algorithm} Bisection method
 :label: bisection-algorithm
 
-**Inputs:** function $f$, interval $[a, b]$, tolerance $\text{tol}$
+**Inputs:** function $f$, interval $[a, b]$, tolerance $\text{tol}$   
 **Output:** interval $[a, b]$, estimate of the root $x$
 
 1. Ensure $f(a)f(b) < 0$
