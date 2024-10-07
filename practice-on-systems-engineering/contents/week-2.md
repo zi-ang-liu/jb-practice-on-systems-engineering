@@ -70,12 +70,13 @@ $x^{(0)}$を与えられた初期値として、上記の漸化式を繰り返�
 ```{prf:algorithm} Newton's method
 :label: newton-algorithm
 
-**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $epsilon$
+**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $epsilon$　　　
 **Output:** estimate of the root $x$
 
-1. While $|f(x^{(k)})| > \epsilon$:
-    1. $x^{(k+1)} \leftarrow x^{(k)} - \frac{f(x^{(k)})}{f'(x^{(k)})}$
-2. Return $x$
+1. $x \leftarrow x^{(0)}$
+2. While $|f(x)| > \epsilon$:
+    1. $x \leftarrow x - f(x) / f'(x)$
+3. Return $x$
 ```
 
 ## 課題
