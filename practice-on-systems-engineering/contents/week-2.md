@@ -33,11 +33,11 @@ $I^{(1)} = [a^{(1)}, b^{(1)}]$を新しい区間として、$f(a^{(1)})f(b^{(1)}
 ```{prf:algorithm} Bisection method
 :label: bisection-algorithm
 
-**Inputs:** function $f$, interval $[a, b]$, tolerance $\text{tol}$   
+**Inputs:** function $f$, interval $[a, b]$, tolerance $\epsilon$   
 **Output:** interval $[a, b]$, estimate of the root $x$
 
 1. Ensure $f(a)f(b) < 0$
-2. While $b - a > \text{tol}$:
+2. While $b - a > \epsilon$:
     1. $x \leftarrow (a + b) / 2$
     2. If $f(x) = 0$, return $m$
     3. Else if $f(a)f(x) < 0$, $b \leftarrow x$
@@ -70,7 +70,7 @@ $x^{(0)}$を与えられた初期値として、上記の漸化式を繰り返�
 ```{prf:algorithm} Newton's method
 :label: newton-algorithm
 
-**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $epsilon$   
+**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $\epsilon$   
 **Output:** estimate of the root $x$
 
 1. $x \leftarrow x^{(0)}$
