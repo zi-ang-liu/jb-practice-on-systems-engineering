@@ -70,7 +70,7 @@ $x^{(0)}$を与えられた初期値として、上記の漸化式を繰り返�
 ```{prf:algorithm} Newton's method
 :label: newton-algorithm
 
-**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $epsilon$　　　
+**Inputs:** function $f$, derivative of the function $f'$, initial guess $x^{(0)}$, tolerance $epsilon$   
 **Output:** estimate of the root $x$
 
 1. $x \leftarrow x^{(0)}$
