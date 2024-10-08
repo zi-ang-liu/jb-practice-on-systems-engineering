@@ -38,6 +38,8 @@ print("消費税込みの金額: ", total_price)
 
 秒数で表される時間を入力し，時間・分・秒に変換し表示するプログラムを作れ．
 
+例：90秒は1分30秒に変換される．
+
 ```python
 seconds = int(input("秒数を入力してください: "))
 # your code here
