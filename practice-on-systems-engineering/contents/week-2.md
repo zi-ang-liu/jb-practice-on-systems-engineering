@@ -85,6 +85,24 @@ Colabで新しいノートブックを作成し、以下の課題完成してく
 
 Colabで数式を記述する方法は、[こちら](https://hwb.ecc.u-tokyo.ac.jp/hwb2023/applications/latex/5min/)を参照してください。
 
+ColabはMarkdown記法で表を記述することができます。
+
+たとえば、以下のように記述することで表を作成することができます。
+
+```markdown
+| Student ID | Name | Score |
+| --- | --- | --- |
+| 1 | Alice | 80 |
+| 2 | Bob | 90 |
+```
+
+| Student ID | Name | Score |
+| --- | --- | --- |
+| 1 | Alice | 80 |
+| 2 | Bob | 90 |
+
+
+
 ### 課題1：二分法の実装（４０点）
 ```python
 def bisection(f, a, b, tol=1e-6):
