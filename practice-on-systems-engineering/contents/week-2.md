@@ -83,6 +83,8 @@ $x^{(0)}$を与えられた初期値として、上記の漸化式を繰り返�
 
 Colabで新しいノートブックを作成し、以下の課題完成してください。ファイル名は`week-2.ipynb`としてください。実験の成果物を Moodle 経由で提出しもらいます。
 
+Colabで数式を記述する方法は、[こちら](https://hwb.ecc.u-tokyo.ac.jp/hwb2023/applications/latex/5min/)を参照してください。
+
 ### 課題1：二分法の実装（４０点）
 ```python
 def bisection(f, a, b, tol=1e-6):
