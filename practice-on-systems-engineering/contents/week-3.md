@@ -347,7 +347,7 @@ print("Total weight:", knapsack_weight(x))
 
 ソースコードでは、`knapsack_weight(x_new) <= W and knapsack_value(x_new) > knapsack_value(x)`という条件で解を更新しています。この条件について、なぜこのような条件が設定されているのか、説明してください。
 
-### 課題 4-3 (10点)
+#### 課題 4-3 (10点)
 
 他の効率的に初期解を設定する方法を考えてください。新しい初期解の設定方法を実装し、その効果を調査してください。
 
