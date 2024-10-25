@@ -255,7 +255,7 @@ $$
 \end{align*}
 $$
 
-`# your code here`の部分にコードを記述してください。
+Random Searchを用いて、ナップサック問題を解くPythonプログラムは以下の通りです。
 
 ```python
 import numpy as np
@@ -275,7 +275,7 @@ def knapsack_value(x):
     float
         The total value
     """
-    # your code here
+    return np.sum(v * x)
 
 
 def knapsack_weight(x):
@@ -292,7 +292,7 @@ def knapsack_weight(x):
     float
         The total weight
     """
-    # your code here
+    return np.sum(w * x)
 
 
 def random_search(num_item, num_iter):
@@ -315,9 +315,9 @@ def random_search(num_item, num_iter):
     x = np.zeros(num_item)
     
     for _ in range(num_iter):
-        # your code here
+        x_new = np.random.randint(0, 2, num_item)
         if knapsack_weight(x_new) <= W and knapsack_value(x_new) > knapsack_value(x):
-            # your code here
+            x = x_new
 
     return x
 
@@ -341,11 +341,11 @@ print("Total weight:", knapsack_weight(x))
 
 #### 課題 4-1 (5点)
 
-課題4のプログラムでは、`x = np.zeros(num_item)`で初期解を設定しています。なぜこのような初期解が設定されているのか、説明してください。ランダムに初期解を設定すると、どのような問題が発生する可能性があるか、考察してください。
+ソースコードでは、`x = np.zeros(num_item)`で初期解を設定しています。なぜこのような初期解が設定されているのか、説明してください。ランダムに初期解を設定すると、どのような問題が発生する可能性があるか、考察してください。
 
 #### 課題 4-2 (5点)
 
-課題4のプログラムでは、`knapsack_weight(x_new) <= W and knapsack_value(x_new) > knapsack_value(x)`という条件で解を更新しています。この条件について、なぜこのような条件が設定されているのか、説明してください。
+ソースコードでは、`knapsack_weight(x_new) <= W and knapsack_value(x_new) > knapsack_value(x)`という条件で解を更新しています。この条件について、なぜこのような条件が設定されているのか、説明してください。
 
 ### 課題 4-3 (10点)
 
