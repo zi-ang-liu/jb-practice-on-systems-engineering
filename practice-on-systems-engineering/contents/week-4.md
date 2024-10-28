@@ -4,8 +4,7 @@
 
 [Pythonプログラミング入門](https://utokyo-ipp.github.io/index.html#)にアクセスし、以下の内容を学習してください。
 
-- pandasライブラリ
-- scikit-learnライブラリ
+- [クラス](https://utokyo-ipp.github.io/6/6-3.html)
 
 ## 課題
 
