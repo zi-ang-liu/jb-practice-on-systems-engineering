@@ -1,93 +1,79 @@
-def bracket(f, x1=0, s=1e-2, k=2.0):
+import numpy as np
+
+
+def knapsack_value(x):
     """
-    bracket function: find a bracket of the minimum
+    Calculate the total value of selected items
 
     Parameters
     ----------
-    f : function
-        The function to minimize
-    x1 : float
-        Initial guess
-    s : float
-        Step size
-    k : float
-        Expansion factor
+    x : np.ndarray
+        The vector with binary values, 1 if the item is selected, 0 otherwise
 
     Returns
     -------
-    tuple
-        A tuple of the form (x1, x2, x3, f1, f2, f3)
-        where x1>x2>x3 and f1>f2<f3
+    float
+        The total value
     """
-    f1 = f(x1)
-    x2 = x1 + s
-    f2 = f(x2)
-    if f2 > f1:
-        x1, x2 = x2, x1
-        f1, f2 = f2, f1
-        s = -s
-    while True:
-        x3 = x2 + s
-        f3 = f(x3)
-        if f3 > f2:
-            return x1, x2, x3, f1, f2, f3
-        x1, x2, x3 = x2, x3, x3 + s
-        f1, f2, f3 = f2, f3, f(x3)
-        s *= k
+    return np.sum(v * x)
 
 
-def f(x):
-    return x**2
-
-
-x1, x2, x3, f1, f2, f3 = bracket(f, -1)
-print(f"x1={x1}, x2={x2}, x3={x3}, f1={f1}, f2={f2}, f3={f3}")
-
-
-def bisection(f, a, b, tol=1e-6):
+def knapsack_weight(x):
     """
-    Bisection method: root finding algorithm
+    Calculate the total weight of selected items
 
     Parameters
     ----------
-    f : function
-        The function to find the root of
-    a : float
-        Lower bound of the interval
-    b : float
-        Upper bound of the interval
-    tol : float
-        Tolerance
+    x : np.ndarray
+        The vector with binary values, 1 if the item is selected, 0 otherwise
 
     Returns
     -------
-    tuple
-        A tuple of the form (a, b)
-        where f(a) and f(b) have opposite signs
+    float
+        The total weight
+    """
+    return np.sum(w * x)
+
+
+def random_search(num_item, num_iter):
+    """
+    Random Search for Knapsack Problem
+
+    Parameters
+    ----------
+    num_item : int
+        Number of items
+    num_iter : int
+        Number of iterations
+
+    Returns
+    -------
+    x : np.ndarray
+        The estimate of the solution
     """
 
-    if f(a) * f(b) > 0:
-        raise ValueError("f(a) and f(b) must have opposite signs")
+    x = np.zeros(num_item)
+    
+    for _ in range(num_iter):
+        x_new = np.random.randint(0, 2, num_item)
+        if knapsack_weight(x_new) <= W and knapsack_value(x_new) > knapsack_value(x):
+            x = x_new
 
-    if f(a) == 0:
-        return a, a
-    if f(b) == 0:
-        return b, b
-
-    while b - a > tol:
-        m = (a + b) / 2
-        if f(m) == 0:
-            return m, m
-        elif f(a) * f(m) < 0:
-            b = m
-        else:
-            a = m
-    return a, b
+    return x
 
 
-def f(x):
-    return x**2 - 4
+# weight of items
+w = np.array([7, 5, 3, 2, 8])
+# value of items
+v = np.array([5, 10, 8, 4, 7])
+# knapsack capacity
+W = 15
+# number of items
+num_item = len(w)
+# number of iterations
+num_iter = 500
 
-
-a, b = bisection(f, 0, 3)
-print(f"a={a}, b={b}")
+x = random_search(num_item, num_iter)
+print("Selected items:", np.where(x == 1)[0])
+print("Total value:", knapsack_value(x))
+print("Total weight:", knapsack_weight(x))

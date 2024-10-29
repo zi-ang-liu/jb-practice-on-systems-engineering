@@ -259,6 +259,8 @@ $$
 
 Random Searchを用いて、ナップサック問題を解くPythonプログラムは以下の通りです。
 
+`np.where()`関数は、条件を満たす要素のインデックスを返します。
+
 ```python
 import numpy as np
 
