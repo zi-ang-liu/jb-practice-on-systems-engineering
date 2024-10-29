@@ -383,6 +383,10 @@ idx = np.argsort(a)
 print(idx)
 ```
 
+```bash
+[1 2 0]
+```
+
 
 
 
