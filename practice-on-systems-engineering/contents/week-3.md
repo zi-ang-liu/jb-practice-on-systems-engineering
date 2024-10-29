@@ -378,14 +378,29 @@ Table: 解の評価値の比較
 ```python
 import numpy as np
 
-a = np.array([3, 1, 2])
+a = np.array([3, 1, 4, 2])
 idx = np.argsort(a)
 print(idx)
 ```
 
 ```bash
-[1 2 0]
+[1 3 0 2]
 ```
+
+`a`を`-a`にすることで、降順に並べ替えることができます。
+
+```python
+import numpy as np
+
+a = np.array([3, 1, 4, 2])
+idx = np.argsort(-a)
+print(idx)
+```
+
+```bash
+[2 0 3 1]
+```
+
 
 
 
