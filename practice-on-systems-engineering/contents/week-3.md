@@ -359,7 +359,7 @@ print("Total weight:", knapsack_weight(x))
 
 アルゴリズムの比較について、以下の表を作成してください。ランダムサーチには、ランダム性があるため、複数回（10回程度）実行して平均値を求めてください。
 
-初期解を$\mathbf{x_0}$としたとき、その評価値を$\sum_{i \in \mathcal{I}} v_i x_{0i}$とします。
+解を$\mathbf{x}$としたとき、その評価値を$\sum_{i \in \mathcal{I}} v_i x_{i}$とします。
 
 Table: 解の評価値の比較
 
