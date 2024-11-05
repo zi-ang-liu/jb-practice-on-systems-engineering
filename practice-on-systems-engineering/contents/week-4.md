@@ -253,7 +253,7 @@ plt.show()
 
 scikit-learnの[Perceptron](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)クラスを使用して、パーセプトロンアルゴリズムを実装して、課題1の分類問題に適用してください。
 
-`Perceptron`クラスから`ppn`オブジェクトを作成し、`fit`メソッドを使用してモデルをトレーニングし、下記のコードを使用して結果の精度を確認してください。
+`Perceptron`クラスから`ppn`オブジェクトを作成し、`fit`メソッドを使用してモデルをトレーニングし、下記のコードを使用して結果の精度を確認してください。出力が`1.0`に近いほど、モデルの性能が高いことを示します。
 
 ```python
 from sklearn.linear_model import Perceptron
