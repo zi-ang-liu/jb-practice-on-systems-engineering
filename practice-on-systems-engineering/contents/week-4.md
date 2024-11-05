@@ -14,7 +14,7 @@
 パーセプトロンは、入力$\mathbf{x} \in \mathbb{R}^d$を出力値$f(\mathbf{x}) \in \{-1, 1\}$にマッピングするバイナリ線形分類器です。パーセプトロンは次のように表すことができます。
 
 $$
-f(\mathbf{x}) = h(\mathbf{w} \cdot \mathbf{x} + b)
+f(\mathbf{x}) = h(\mathbf{w}^\top \mathbf{x} + b)
 $$
 
 ここで、$\mathbf{w}$は重みベクトル、$\mathbf{w} \in \mathbb{R}^d$、$\mathbf{b}$はバイアス、$h(\cdot)$は次のように定義されます。
@@ -101,19 +101,19 @@ $$
 パーセプトロン学習アルゴリズムの実装では、$x_0 = 1$および$w_0 = b$を設定することで、以下のように表現することができます。
 
 $$
-\mathbf{w} = [b, w_1, w_2, \ldots, w_n]
+\mathbf{w} = [b, w_1, w_2, \ldots, w_n]^\top
 $$
 
 および
 
 $$
-\mathbf{x} = [1, x_1, x_2, \ldots, x_n]
+\mathbf{x} = [1, x_1, x_2, \ldots, x_n]^\top
 $$
 
 ここで、$\mathbf{w} \in \mathbb{R}^{n+1}$および$\mathbf{x} \in \mathbb{R}^{n+1}$です。パーセプトロンは次のように表現することができます。
 
 $$
-f(\mathbf{x}) = h(\mathbf{w} \cdot \mathbf{x})
+f(\mathbf{x}) = h(\mathbf{w}^\top \mathbf{x})
 $$
 
 ここで、$\mathbf{w} \cdot \mathbf{x} = \sum_{j=0}^{n} w_j x_j$です。
