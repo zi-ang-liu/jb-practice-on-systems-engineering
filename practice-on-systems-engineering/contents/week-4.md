@@ -31,24 +31,24 @@ $$
 
 ### 損失関数
 
-説明を簡略化するために、$\hat{y}_i = f(\mathbf{x}_i)$を使用して、入力$\mathbf{x}_i$のパーセプトロンの予測を表します。入力$\mathbf{x}_i$の真のラベルを$y_i$とします。パーセプトロンは、$\hat{y}_i = y_i$の場合は正しい予測を行い、$\hat{y}_i \neq y_i$の場合は誤った予測を行います。
+説明を簡略化するために、$\hat{y}^{(i)} = f(\mathbf{x}^{(i)})$を使用して、入力$\mathbf{x}^{(i)}$のパーセプトロンの予測を表します。入力$\mathbf{x}^{(i)}$の真のラベルを$y^{(i)}$とします。パーセプトロンは、$\hat{y}^{(i)} = y^{(i)}$の場合は正しい予測を行い、$\hat{y}^{(i)} \neq y^{(i)}$の場合は誤った予測を行います。
 
 パーセプトロン学習アルゴリズムで使用される損失関数は、ヒンジ損失と呼ばれ、次のように定義されます。
 
 $$
-\mathcal{L}(\mathbf{w}, b) = \sum_{i=1}^{n} \max(0, -y_i \hat{y}_i)
+\mathcal{L}(\mathbf{w}, b) = \sum_{i=1}^{n} \max(0, -y^{(i)} \hat{y}^{(i)})
 $$
 
 単一のサンプル$(\mathbf{x}_i, y_i)$のヒンジ損失は次のようになります。
 
 $$
-\mathcal{L}_i(\mathbf{w}, b) = \max(0, -y_i \hat{y}_i)
+\mathcal{L}_i(\mathbf{w}, b) = \max(0, -y^{(i)} \hat{y}^{(i)})
 $$
 
-$y_i$と$\hat{y}_i$はどちらも$-1$または$1$のいずれかです。したがって、
+$y^{(i)}$と$\hat{y}^{(i)}$はどちらも$-1$または$1$のいずれかです。したがって、
 
-- $y_i = f(\mathbf{x}_i)$の場合、予測は正しい（すなわち、$y_i \hat{y}_i = 1$）ため、ヒンジ損失はゼロです。
-- $y_i \neq f(\mathbf{x}_i)$の場合、予測は誤っています（すなわち、$y_i \hat{y}_i = -1$）ため、ヒンジ損失は$-y_i \hat{y}_i = 1$です。
+- $y^{(i)} = f(\mathbf{x}^{(i)})$の場合、予測は正しい（すなわち、$y^{(i)} \hat{y}^{(i)} = 1$）ため、ヒンジ損失はゼロです。
+- $y^{(i)} \neq f(\mathbf{x}^{(i)})$の場合、予測は誤っています（すなわち、$y^{(i)} \hat{y}^{(i)} = -1$）ため、ヒンジ損失は$-y^{(i)} \hat{y}^{(i)} = 1$です。
 
 「完璧な」分類器の場合、ヒンジ損失$\mathcal{L}(\mathbf{w}, b) = 0$です。 
 
@@ -63,16 +63,16 @@ b &\leftarrow b - \eta \nabla_{b} \mathcal{L}_i(\mathbf{w}, b)
 \end{align*}
 $$
 
-ここで、$\nabla_{\mathbf{w}} \mathcal{L}_i(\mathbf{w}, b)$と$\nabla_{b} \mathcal{L}_i(\mathbf{w}, b)$は、サンプル$(\mathbf{x}_i, y_i)$に対するヒンジ損失の重みベクトル$\mathbf{w}$とバイアス$b$に関する勾配です。
+ここで、$\nabla_{\mathbf{w}} \mathcal{L}_i(\mathbf{w}, b)$と$\nabla_{b} \mathcal{L}_i(\mathbf{w}, b)$は、サンプル$(\mathbf{x}^{(i)}, y^{(i)})$に対するヒンジ損失の重みベクトル$\mathbf{w}$とバイアス$b$に関する勾配です。
 
-$-y_i \hat{y}_i \leq 0$の場合、ヒンジ損失の勾配はゼロであり、重みベクトル$\mathbf{w}$とバイアス$b$は変更されません。
+$-y^{(i)} \hat{y}^{(i)} \leq 0$の場合、ヒンジ損失の勾配はゼロであり、重みベクトル$\mathbf{w}$とバイアス$b$は変更されません。
 
-$-y_i \hat{y}_i > 0$の場合、サンプル$(\mathbf{x}_i, y_i)$に対するヒンジ損失の重みベクトル$\mathbf{w}$とバイアス$b$の勾配は次のようになります。
+$-y^{(i)} \hat{y}^{(i)} > 0$の場合、サンプル$(\mathbf{x}_i, y_i)$に対するヒンジ損失の重みベクトル$\mathbf{w}$とバイアス$b$の勾配は次のようになります。
 
 $$
 \begin{align*}
-\nabla_{\mathbf{w}} \mathcal{L}(\mathbf{w}, b) &= -y_i \mathbf{x}_i \\
-\nabla_{b} \mathcal{L}(\mathbf{w}, b) &= -y_i
+\nabla_{\mathbf{w}} \mathcal{L}(\mathbf{w}, b) &= -y^{(i)} \mathbf{x}^{(i)} \\
+\nabla_{b} \mathcal{L}(\mathbf{w}, b) &= -y^{(i)}
 \end{align*}
 $$
 
@@ -80,8 +80,8 @@ $$
 
 $$
 \begin{align*}
-\mathbf{w} &\leftarrow \mathbf{w} + \eta y_i \mathbf{x}_i \\
-b &\leftarrow b + \eta y_i
+\mathbf{w} &\leftarrow \mathbf{w} + \eta y^{(i)} \mathbf{x}^{(i)} \\
+b &\leftarrow b + \eta y^{(i)}
 \end{align*}
 $$
 
@@ -89,12 +89,12 @@ $$
 
 $$
 \begin{align*}
-\mathbf{w} &\leftarrow \mathbf{w} + \eta (y_i - \hat{y}_i) \mathbf{x}_i \\
-b &\leftarrow b + \eta (y_i - \hat{y}_i)
+\mathbf{w} &\leftarrow \mathbf{w} + \eta (y^{(i)} - \hat{y}^{(i)}) \mathbf{x}_i \\
+b &\leftarrow b + \eta (y^{(i)} - \hat{y}^{(i)})
 \end{align*}
 $$
 
-この更新ルールは、前のものと同等です。$y_i = \hat{y}_i$の場合、更新はゼロであり、重みベクトル$\mathbf{w}$とバイアス$b$は変更されません。$y_i \neq \hat{y}_i$の場合、更新は$y_i - \hat{y}_i$であり、これは$2 y_i$と等価です。学習率$\eta$を調整することで、これら2つの更新ルールを同等と見なすことができます。
+この更新ルールは、前のものと同等です。$y^{(i)} = \hat{y}^{(i)}$の場合、更新はゼロであり、重みベクトル$\mathbf{w}$とバイアス$b$は変更されません。$y_i \neq \hat{y}^{(i)}$の場合、更新は$y^{(i)} - \hat{y}^{(i)}$であり、これは$2 y^{(i)}$と等価です。学習率$\eta$を調整することで、これら2つの更新ルールを同等と見なすことができます。
 
 ### アルゴリズム
 
@@ -116,12 +116,12 @@ $$
 f(\mathbf{x}) = h(\mathbf{w} \cdot \mathbf{x})
 $$
 
-ここで、$\mathbf{w} \cdot \mathbf{x} = \sum_{i=0}^{n} w_i x_i$です。
+ここで、$\mathbf{w} \cdot \mathbf{x} = \sum_{j=0}^{n} w_j x_j$です。
 
-$x_0 = 1$と設定したため、更新ルールは次のように簡略化されます。
+$x^{(i)}_0 = 1$と設定したため、更新ルールは次のように簡略化されます。
 
 $$
-\mathbf{w} \leftarrow \mathbf{w} + \eta y_i \mathbf{x}_i
+\mathbf{w} \leftarrow \mathbf{w} + \eta y^{(i)} \mathbf{x}^{(i)}
 $$
 
 パーセプトロン学習アルゴリズムは、以下の通りです。
@@ -135,13 +135,13 @@ $$
 1. Initialize $\mathbf{w} \leftarrow \mathbf{0}$ 
 2. **For** $t = 1$ to $T$
     1. **For** $i = 1$ to $n$
-        1. Compute the prediction $f(\mathbf{x}_i) = h(\mathbf{w} \cdot \mathbf{x}_i)$
-        2. **If** $y_i f(\mathbf{x}_i) \leq 0$
-            1. Update the weight vector $\mathbf{w} \leftarrow \mathbf{w} + \eta y_i \mathbf{x}_i$
+        1. Compute the prediction $f(\mathbf{x}^{(i)}) = h(\mathbf{w} \cdot \mathbf{x}^{(i)})$
+        2. **If** $y^{(i)} f(\mathbf{x}^{(i)}) \leq 0$
+            1. Update the weight vector $\mathbf{w} \leftarrow \mathbf{w} + \eta y^{(i)} \mathbf{x}^{(i)}$
 3. **Return** $\mathbf{w}$
 ```
 
-パーセプトロン学習アルゴリズムでは、重みベクトル$\mathbf{w}$は、トレーニングデータ$\mathcal{D}$の各トレーニング例$(\mathbf{x}_i, y_i)$に対して反復的に更新されます。学習率$\eta$は、更新のステップサイズを制御します。アルゴリズムは、固定されたエポック数$T$または収束まで続行されます。
+パーセプトロン学習アルゴリズムでは、重みベクトル$\mathbf{w}$は、トレーニングデータ$\mathcal{D}$の各トレーニング例$(\mathbf{x}^{(i)}, y^{(i)})$に対して反復的に更新されます。学習率$\eta$は、更新のステップサイズを制御します。アルゴリズムは、固定されたエポック数$T$または収束まで続行されます。
 
 ## 課題
 
