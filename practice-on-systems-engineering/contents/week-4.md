@@ -253,6 +253,16 @@ plt.show()
 
 scikit-learnの[Perceptron](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)クラスを使用して、パーセプトロンアルゴリズムを実装して、課題1の分類問題に適用してください。
 
+`Perceptron`クラスから`ppn`オブジェクトを作成し、`fit`メソッドを使用してモデルをトレーニングし、下記のコードを使用して結果の精度を確認してください。
+
+```python
+from sklearn.linear_model import Perceptron
+
+# your code here
+
+print(f"Accuracy: {ppn.score(X, y)}")
+```
+
 ### 課題3(20点)
 
 現実社会では、バイナリ分類機が適用できる例を挙げてください。その例において、入力データ$\mathbf{x}$と出力値$f(\mathbf{x})$は何ですか？
