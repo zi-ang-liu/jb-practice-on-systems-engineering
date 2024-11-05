@@ -116,8 +116,6 @@ $$
 f(\mathbf{x}) = h(\mathbf{w}^\top \mathbf{x})
 $$
 
-ここで、$\mathbf{w} \cdot \mathbf{x} = \sum_{j=0}^{n} w_j x_j$です。
-
 $x^{(i)}_0 = 1$と設定したため、更新ルールは次のように簡略化されます。
 
 $$
