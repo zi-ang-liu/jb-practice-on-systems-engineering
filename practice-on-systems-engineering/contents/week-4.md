@@ -11,13 +11,13 @@
 
 パーセプトロンは、教師あり学習の最も古いアルゴリズムの1つです。パーセプトロンは、1943年にWarren McCullochとWalter Pittsによって提案され、1957年にFrank Rosenblattによって実装されました。
 
-パーセプトロンは、入力$\mathbf{x} \in \mathbb{R}^n$を出力値$f(\mathbf{x}) \in \{-1, 1\}$にマッピングするバイナリ線形分類器です。パーセプトロンは次のように表すことができます。
+パーセプトロンは、入力$\mathbf{x} \in \mathbb{R}^d$を出力値$f(\mathbf{x}) \in \{-1, 1\}$にマッピングするバイナリ線形分類器です。パーセプトロンは次のように表すことができます。
 
 $$
 f(\mathbf{x}) = h(\mathbf{w} \cdot \mathbf{x} + b)
 $$
 
-ここで、$\mathbf{w}$は重みベクトル、$\mathbf{w} \in \mathbb{R}^n$、$\mathbf{b}$はバイアス、$h(\cdot)$は次のように定義されます。
+ここで、$\mathbf{w}$は重みベクトル、$\mathbf{w} \in \mathbb{R}^d$、$\mathbf{b}$はバイアス、$h(\cdot)$は次のように定義されます。
 
 $$
 h(z) =
