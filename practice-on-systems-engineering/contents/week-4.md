@@ -101,16 +101,16 @@ $$
 パーセプトロン学習アルゴリズムの実装では、$x_0 = 1$および$w_0 = b$を設定することで、以下のように表現することができます。
 
 $$
-\mathbf{w} = [b, w_1, w_2, \ldots, w_n]^\top
+\mathbf{w} = [b, w_1, w_2, \ldots, w_d]^\top
 $$
 
 および
 
 $$
-\mathbf{x} = [1, x_1, x_2, \ldots, x_n]^\top
+\mathbf{x} = [1, x_1, x_2, \ldots, x_d]^\top
 $$
 
-ここで、$\mathbf{w} \in \mathbb{R}^{n+1}$および$\mathbf{x} \in \mathbb{R}^{n+1}$です。パーセプトロンは次のように表現することができます。
+ここで、$\mathbf{w} \in \mathbb{R}^{d+1}$および$\mathbf{x} \in \mathbb{R}^{d+1}$です。パーセプトロンは次のように表現することができます。
 
 $$
 f(\mathbf{x}) = h(\mathbf{w}^\top \mathbf{x})
