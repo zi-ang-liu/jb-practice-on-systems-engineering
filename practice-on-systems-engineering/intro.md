@@ -22,27 +22,6 @@
 
 本実験は、[Pythonプログラミング入門](https://utokyo-ipp.github.io/index.html#)を使用して、Pythonプログラミングの基本を学びます。その上で、基本的な最適化アルゴリズムの考え方を学び、機械学習を体験します。
 
-<!-- 実験スケジュールは以下の通りです。
-
-- 第1週目
-  - colaboratoryの使い方
-  - 数値演算
-  - 変数と関数の基礎
-  - 論理・比較演算と条件分岐の基礎
-- 第2週目
-  - リスト (list)
-  - 条件分岐
-  - 繰り返し
-  - 関数
-- 第3週目
-  - モジュールの使い方
-  - NumPyライブラリ
-- 第4週目
-  - pandasライブラリ
-  - scikit-learnライブラリ -->
-
-
-
 ## 実験環境
 
 本実験では、Google Colabを使用します。Colab（正式名称「Colaboratory」）では、ブラウザ上で Python を記述、実行できます。
@@ -57,6 +36,8 @@
 6. Fileメニューから「Download」、「Download .ipynb」を選択して、ノートブックをダウンロード
 
 本実験で作成するすべての成果物を Colab で作成し、「.ipynb」形式で Moodle 経由で提出してください。
+
+[VS Code](https://code.visualstudio.com/) などのエディタを使用して、ローカルで.ipynb ファイルを編集、実行することも可能です。詳細は[こちら](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)を参照してください。
 
 ### Geminiについて
 
