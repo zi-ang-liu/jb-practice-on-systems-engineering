@@ -79,26 +79,6 @@ $x^{(0)}$を与えられた初期値として、上記の漸化式を繰り返�
 3. Return $x$
 ``` -->
 
-## Colabでの数式と表の記述
-
-Colabで数式を記述する方法は、[こちら](https://hwb.ecc.u-tokyo.ac.jp/hwb2023/applications/latex/5min/)を参照してください。
-
-ColabはMarkdown記法で表を記述することができます。
-
-たとえば、以下のように記述することで表を作成することができます。
-
-```markdown
-| Student ID | Name | Score |
-| --- | --- | --- |
-| 1 | Alice | 80 |
-| 2 | Bob | 90 |
-```
-
-| Student ID | Name | Score |
-| --- | --- | --- |
-| 1 | Alice | 80 |
-| 2 | Bob | 90 |
-
 ## 課題
 
 Colabで新しいノートブックを作成し、以下の課題完成してください。ファイル名は`week-2.ipynb`としてください。実験の成果物を Moodle 経由で提出しもらいます。

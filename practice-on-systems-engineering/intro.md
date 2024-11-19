@@ -39,6 +39,29 @@
 
 [VS Code](https://code.visualstudio.com/) などのエディタを使用して、ローカルで.ipynb ファイルを編集、実行することも可能です。詳細は[こちら](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)を参照してください。
 
+### Colabでの数式と表の記述
+
+Colabで数式を記述する方法は、[こちら](https://hwb.ecc.u-tokyo.ac.jp/hwb2023/applications/latex/5min/)を参照してください。
+
+ColabはMarkdown記法で表を記述することができます。
+
+1. 左上の「+ Text」をクリック
+2. Markdownセルを選択し、テキストを入力
+
+たとえば、以下の内容を入力すると、表が表示されます。
+
+```markdown
+| Student ID | Name | Score |
+| --- | --- | --- |
+| 1 | Alice | 80 |
+| 2 | Bob | 90 |
+```
+
+| Student ID | Name | Score |
+| --- | --- | --- |
+| 1 | Alice | 80 |
+| 2 | Bob | 90 |
+
 ### Geminiについて
 
 GeminiはGoogleが開発した生成系AIです。自動的にソースコードを生成する機能があります。
